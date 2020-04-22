@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
@@ -9,6 +10,7 @@ import { ProgressComponent } from './progress/progress.component';
 import { PagesComponent } from './pages.component';
 import { SharedModule } from '../shared/shared.module';
 import { ChartsComponent } from './charts/charts.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 // Ng Charts
 import { ChartsModule } from 'ng2-charts';
@@ -25,13 +27,15 @@ import { DoughnutChartComponent } from '../components/doughnut-chart/doughnut-ch
     PagesComponent,
     IncreaserComponent,
     DoughnutChartComponent,
+    AccountSettingsComponent,
   ],
   imports: [
     RouterModule,
     SharedModule,
+    CommonModule,
     PagesRoutingModule,
     FormsModule,
-    ChartsModule,
+    ChartsModule
   ],
 })
 export class PagesModule {}

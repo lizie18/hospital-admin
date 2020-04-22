@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 // Rutas
 import { AppRoutingModule } from './app-routing.module';
@@ -23,9 +25,11 @@ import { RegisterComponent } from './login/register.component';
   imports: [
     AppRoutingModule,
     BrowserModule,
-    PagesModule
+    PagesModule,
+    FormsModule
+    // ReactiveFormsModule
   ],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
         SidebarComponent
     ],
     imports: [
-        RouterModule
+        RouterModule,
+        CommonModule
     ]
 })
 
